@@ -7,28 +7,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+        black: '#000000',
+        white: '#ffffff',
+        gray: {
+          50: '#f9fafb',
+          100: '#f3f4f6',
+          200: '#e5e7eb',
+          300: '#d1d5db',
+          400: '#9ca3af',
+          500: '#6b7280',
+          600: '#4b5563',
+          700: '#374151',
+          800: '#1f2937',
+          900: '#111827',
         },
-        dark: {
-          100: '#1e1e2e',
-          200: '#181825',
-          300: '#11111b',
+        accent: '#00ff88',
+        status: {
+          danger: '#ff4444',
+          info: '#0066ff',
+          warning: '#ffaa00',
         },
-        accent: '#64ffda',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
+      },
+      boxShadow: {
+        '3d': '4px 4px 0px 0px rgba(255, 255, 255, 0.1)',
+        '3d-hover': '6px 6px 0px 0px rgba(255, 255, 255, 0.15)',
+        '3d-sm': '2px 2px 0px 0px rgba(255, 255, 255, 0.08)',
+        '3d-sm-hover': '4px 4px 0px 0px rgba(255, 255, 255, 0.12)',
+      },
+      borderWidth: {
+        '3': '3px',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',

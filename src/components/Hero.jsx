@@ -1,12 +1,11 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-300 via-dark-200 to-dark-100" />
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -28,13 +27,9 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up-delayed">
             <a
               href="#contact"
-              className="relative px-8 py-4 bg-transparent text-accent font-semibold rounded-lg 
-                       border-2 border-accent overflow-hidden group transition-all duration-300
-                       hover:text-dark-300 hover:shadow-[0_0_30px_rgba(100,255,218,0.4)]"
+              className="btn-outline"
             >
-              <span className="absolute inset-0 w-full h-full bg-accent transform -translate-x-full 
-                             group-hover:translate-x-0 transition-transform duration-300 ease-out" />
-              <span className="relative flex items-center gap-2">
+              <span className="flex items-center gap-2">
                 <FaEnvelope className="w-4 h-4" />
                 Get In Touch
               </span>

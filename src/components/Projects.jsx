@@ -32,7 +32,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-dark-300">
+    <section id="projects" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">Projects</h2>
         
@@ -43,16 +43,16 @@ const Projects = () => {
               className="card group overflow-hidden p-0"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden border-b border-gray-700">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 
                            transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-100 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" />
                 <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-accent/20 text-accent text-xs font-mono rounded-full border border-accent/30">
+                  <span className="px-3 py-1 bg-gray-800 text-accent text-xs font-mono rounded-full border border-accent">
                     {project.category.toUpperCase()}
                   </span>
                 </div>
@@ -60,9 +60,9 @@ const Projects = () => {
               
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
-                  {project.category === 'game' && <FaGamepad className="text-purple-400" />}
-                  {project.category === 'web' && <FaGlobe className="text-blue-400" />}
-                  {project.category === 'ai' && <FaRobot className="text-green-400" />}
+                  {project.category === 'game' && <FaGamepad className="text-gray-400" />}
+                  {project.category === 'web' && <FaGlobe className="text-gray-400" />}
+                  {project.category === 'ai' && <FaRobot className="text-gray-400" />}
                   <h3 className="text-lg font-semibold text-white group-hover:text-accent 
                                transition-colors">
                     {project.title}
@@ -77,7 +77,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 bg-dark-200 text-gray-400 text-xs rounded 
+                      className="px-2 py-1 bg-gray-800 text-gray-400 text-xs rounded 
                                border border-gray-700"
                     >
                       {tag}

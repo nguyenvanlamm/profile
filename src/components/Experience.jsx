@@ -11,7 +11,6 @@ const experiences = [
       'Built cross-platform games for multiple devices',
       'Optimized performance and user experience',
     ],
-    color: 'from-purple-500 to-pink-500',
   },
   {
     icon: FaGlobe,
@@ -23,7 +22,6 @@ const experiences = [
       'Implemented responsive designs for all devices',
       'Created RESTful APIs and integrated services',
     ],
-    color: 'from-blue-500 to-cyan-500',
   },
   {
     icon: FaBrain,
@@ -35,13 +33,12 @@ const experiences = [
       'Working on AI-powered application projects',
       'Staying updated with latest AI developments',
     ],
-    color: 'from-green-500 to-emerald-500',
   },
 ];
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-dark-300">
+    <section id="experience" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">Experience</h2>
         
@@ -52,10 +49,10 @@ const Experience = () => {
               className="card group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${exp.color} 
+              <div className="w-14 h-14 rounded-xl bg-gray-800 border-2 border-gray-700 
                               flex items-center justify-center mb-6 
-                              group-hover:scale-110 transition-transform duration-300`}>
-                <exp.icon className="w-7 h-7 text-white" />
+                              group-hover:border-accent group-hover:-translate-y-1 transition-all duration-300">
+                <exp.icon className="w-7 h-7 text-accent" />
               </div>
               
               <h3 className="text-xl font-bold text-white mb-2">{exp.title}</h3>

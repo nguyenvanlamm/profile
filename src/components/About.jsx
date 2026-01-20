@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-dark-200">
+    <section id="about" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-title">About Me</h2>
         
@@ -22,23 +22,23 @@ const About = () => {
             </p>
             
             <div className="flex flex-wrap gap-3 pt-4">
-              <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-mono border border-accent/20">
+              <span className="skill-tag">
                 Curious
               </span>
-              <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-mono border border-accent/20">
+              <span className="skill-tag">
                 Passionate
               </span>
-              <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-mono border border-accent/20">
+              <span className="skill-tag">
                 Dedicated
               </span>
-              <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-mono border border-accent/20">
+              <span className="skill-tag">
                 Always Learning
               </span>
             </div>
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-accent/20 to-blue-500/20 rounded-2xl p-8 border border-accent/30">
+            <div className="bg-gray-900 rounded-2xl p-8 border border-gray-700 shadow-3d">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-accent mb-2">4+</div>
@@ -58,9 +58,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
           </div>
         </div>
       </div>
