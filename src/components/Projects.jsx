@@ -96,14 +96,6 @@ const Projects = () => {
                     <FaGithub className="w-4 h-4" />
                     Code
                   </a>
-                  <a
-                    href={project.demo}
-                    className="flex items-center gap-2 text-gray-400 hover:text-accent 
-                             transition-colors text-sm"
-                  >
-                    <FaExternalLinkAlt className="w-4 h-4" />
-                    Demo
-                  </a>
                 </div>
               </div>
             </div>
