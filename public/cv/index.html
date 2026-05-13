@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGUYEN VAN LAM - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --ink-light: #4a4a4a;
+            --ink-subtle: #7a7a7a;
+            --paper: #fafcfb;
+            --paper-warm: #f0f5f3;
+            --accent: #10b981;
+            --accent-dark: #059669;
+            --rule: #d1d5db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            .page {
+                box-shadow: none !important;
+                margin: 0 !important;
+            }
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #e8e6e1;
+            color: var(--ink);
+            font-size: 10pt;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: var(--paper);
+            margin: 20px auto;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, transparent 50%, var(--accent) 50%);
+            opacity: 0.12;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2.2fr;
+            height: 297mm;
+        }
+
+        .sidebar {
+            background: var(--ink);
+            color: var(--paper);
+            padding: 28px 22px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--accent);
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            font-size: 7pt;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+        }
+
+        .sidebar-section {
+            margin-bottom: 20px;
+        }
+
+        .sidebar-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 8.5pt;
+        }
+
+        .contact-icon {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            opacity: 0.7;
+            margin-top: 1px;
+        }
+
+        .contact-text {
+            color: rgba(255,255,255,0.85);
+            line-height: 1.3;
+        }
+
+        .contact-text a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+        }
+
+        .skill-category {
+            margin-bottom: 12px;
+        }
+
+        .skill-label {
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .skill-tag {
+            font-size: 7.5pt;
+            padding: 3px 7px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 2px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .skill-tag.highlight {
+            background: var(--accent);
+            color: white;
+        }
+
+        .main {
+            padding: 28px 32px;
+            background: var(--paper);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--ink);
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32pt;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: var(--ink);
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .title {
+            font-size: 10pt;
+            color: var(--accent);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .summary {
+            margin-bottom: 20px;
+            padding: 14px 16px;
+            background: var(--paper-warm);
+            border-left: 3px solid var(--accent);
+            font-size: 9pt;
+            color: var(--ink-light);
+            line-height: 1.55;
+            font-style: italic;
+        }
+
+        .section {
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 11pt;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--ink);
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--rule);
+            font-weight: 600;
+        }
+
+        .experience-item {
+            margin-bottom: 14px;
+            position: relative;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .company {
+            font-weight: 600;
+            font-size: 10pt;
+            color: var(--ink);
+        }
+
+        .period {
+            font-size: 8pt;
+            color: var(--ink-subtle);
+            font-style: italic;
+        }
+
+        .role {
+            font-size: 9pt;
+            color: var(--accent-dark);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .location {
+            font-size: 7.5pt;
+            color: var(--ink-subtle);
+            margin-bottom: 5px;
+        }
+
+        .experience-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience-content li {
+            font-size: 8.5pt;
+            color: var(--ink-light);
+            margin-bottom: 3px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.45;
+        }
+
+        .experience-content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .projects-label {
+            font-size: 7.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ink-subtle);
+            margin-top: 6px;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .project-tag {
+            font-size: 7pt;
+            padding: 2px 8px;
+            background: var(--paper-warm);
+            border: 1px solid var(--rule);
+            border-radius: 2px;
+            color: var(--ink-light);
+        }
+
+        .tech-stack {
+            font-size: 7.5pt;
+            color: var(--ink-subtle);
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-weight: 600;
+            font-size: 9pt;
+            color: var(--ink);
+        }
+
+        .institution {
+            font-size: 8.5pt;
+            color: var(--accent-dark);
+        }
+
+        .edu-period {
+            font-size: 7.5pt;
+            color: var(--ink-subtle);
+            font-style: italic;
+        }
+
+        .page-footer {
+            margin-top: auto;
+            padding-top: 12px;
+            border-top: 1px solid var(--rule);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 7.5pt;
+            color: var(--ink-subtle);
+        }
+
+        .page-footer a {
+            color: var(--accent-dark);
+            text-decoration: none;
+        }
+
+        .two-column-projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .project-card {
+            background: var(--paper-warm);
+            padding: 8px 10px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .project-name {
+            font-weight: 600;
+            font-size: 8.5pt;
+            color: var(--ink);
+            margin-bottom: 2px;
+        }
+
+        .project-client {
+            font-size: 7pt;
+            color: var(--ink-subtle);
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <aside class="sidebar">
+                <div class="profile-section">
+                    <img src="a8.png" alt="NGUYEN VAN LAM" class="profile-photo">
+                    <div class="tagline">Software Engineer</div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Contact</div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <span class="contact-text">26/03/1998</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span class="contact-text"><a href="mailto:lamnv260398@gmail.com">lamnv260398@gmail.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <span class="contact-text">Ha Noi, Viet Nam</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span class="contact-text"><a href="https://lamnv.com">lamnv.com</a></span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Technical Skills</div>
+                    <div class="skill-category">
+                        <div class="skill-label">AI & ML</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag highlight">AI Agent</span>
+                            <span class="skill-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-label">Game Development</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag highlight">Unity</span>
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">2D/3D</span>
+                            <span class="skill-tag">VR/MR</span>
+                            <span class="skill-tag">Cinemachine</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-label">Frontend</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ReactJS</span>
+                            <span class="skill-tag">Redux</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-label">Backend</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-label">Tools</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="main">
+                <header class="header">
+                    <h1 class="name">NGUYEN VAN LAM</h1>
+                    <div class="title">Software Engineer</div>
+                </header>
+
+                <div class="summary">
+                    Software Engineer with 5 years of experience in web and game development. Seeking long-term career growth in software engineering, contributing real product value while continuously improving technical expertise to become a well-rounded and senior-level engineer.
+                </div>
+
+                <section class="section">
+                    <h2 class="section-title">Work Experience</h2>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <span class="company">Freelance</span>
+                            <span class="period">09/2025 – Present</span>
+                        </div>
+                        <div class="role">AI Researcher & Developer</div>
+                        <div class="location">Hanoi, Vietnam</div>
+                        <div class="experience-content">
+                            <ul>
+                                <li>Researching and developing applications using AI models and AI Agents</li>
+                            </ul>
+                            <div class="projects-label">Key Projects</div>
+                            <div class="project-tags">
+                                <span class="project-tag">AI Agent Products</span>
+                                <span class="project-tag">YouTube Not Ads: https://youtubenotads.lamnv.com/</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <span class="company">Plus Studio</span>
+                            <span class="period">03/2024 – 06/2025</span>
+                        </div>
+                        <div class="role">Software Engineer</div>
+                        <div class="location">Hanoi, Vietnam</div>
+                        <div class="experience-content">
+                            <ul>
+                                <li>Participated in 3D, VR, and MR development projects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <span class="company">Yotech</span>
+                            <span class="period">12/2020 – 03/2024</span>
+                        </div>
+                        <div class="role">Software Engineer</div>
+                        <div class="location">Hanoi, Vietnam</div>
+                        <div class="experience-content">
+                            <ul>
+                                <li>Contributed to multiple web and Unity-based projects</li>
+                                <li>Led development teams on various projects</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <span class="company">Yotech</span>
+                            <span class="period">06/2020 – 12/2020</span>
+                        </div>
+                        <div class="role">Intern/Fresher</div>
+                        <div class="location">Hanoi, Vietnam</div>
+                        <div class="experience-content">
+                            <ul>
+                                <li>Strengthened skills in Git, HTML, CSS, JavaScript, C#, and Unity</li>
+                                <li>Participated in small modules of company projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="two-column-projects">
+                        <div class="project-card">
+                            <div class="project-name">Em Hoc Toan</div>
+                            <div class="project-client">Client: Yotech Product | Team: 8 (5 devs)</div>
+                            <div class="tech-stack">ReactJS, Tailwind CSS, Node.js, PostgreSQL</div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-name">MonkeyX (Game)</div>
+                            <div class="project-client">Client: Monkey Junior | Team: 3</div>
+                            <div class="tech-stack">C#, Unity, Figma | Google Play</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="education-item">
+                        <div class="degree">Bachelor of Engineering in Information Technology</div>
+                        <div class="institution">Hanoi Open University</div>
+                        <div class="edu-period">2016 – 2021</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Interests</h2>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Teambuilding</span>
+                        <span class="skill-tag">Music</span>
+                        <span class="skill-tag">Reading</span>
+                        <span class="skill-tag">Traveling</span>
+                        <span class="skill-tag">Sports</span>
+                        <span class="skill-tag">Gaming</span>
+                    </div>
+                </section>
+
+                <div class="page-footer">
+                    <span>NGUYEN VAN LAM • Software Engineer</span>
+                    <span><a href="https://lamnv.com">lamnv.com</a></span>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
