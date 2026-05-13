@@ -2,10 +2,10 @@ import { FaGithub, FaExternalLinkAlt, FaGamepad, FaGlobe, FaRobot } from 'react-
 
 const projects = [
   {
-    title: '3D Game Project',
-    description: 'An immersive 3D game built with Unity featuring advanced gameplay mechanics, interactive environments, and optimized performance.',
-    image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400&h=300&fit=crop',
-    tags: ['Unity', 'C#', '3D', 'Game Dev'],
+    title: 'Monkey Junior - English for kids',
+    description: 'Monkey Junior is a super English learning app designed for children ages 3-8, providing a comprehensive learning pathway to help children build a solid vocabulary bank and develop all four language skills: Listening, Speaking, Reading, and Writing.',
+    image: 'https://play-lh.googleusercontent.com/VEoH8YWkAGsSFuqY9mZU-tX3837MwfzIhozW06IsCIF2YT00j0w1LROlAtJxQvIfeg=w240-h480-rw',
+    tags: ['Android', 'iOS', 'AI', 'Education'],
     github: 'https://github.com/nguyenvanlamm',
     demo: 'https://play.google.com/store/apps/details?id=com.earlystart.android.monkeyjunior',
     category: 'game',
@@ -20,10 +20,10 @@ const projects = [
     category: 'web',
   },
   {
-    title: 'AI Project',
-    description: 'An exploration into AI and machine learning, implementing basic algorithms and exploring neural network concepts.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop',
-    tags: ['Python', 'AI', 'ML', 'TensorFlow'],
+    title: 'Étudier Français',
+    description: "DELF, DALF, TCF exam preparation platform with automatic AI grading.",
+    image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&h=300&fit=crop',
+    tags: ['React', 'AI', 'NLP', 'Education'],
     github: 'https://github.com/nguyenvanlamm',
     demo: 'https://etudier.lamnv.com/en',
     category: 'ai',
