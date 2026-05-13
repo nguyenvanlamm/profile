@@ -7,18 +7,16 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-gray-400 leading-relaxed">
-              I'm an IT Developer with a passion for creating innovative solutions and exploring 
-              new technologies. My journey in software development started with curiosity about 
-              how things work, and it has evolved into a deep love for building impactful applications.
+              I'm an <span className="text-white font-semibold">IT Developer</span> passionate about 
+              building <span className="text-white font-semibold">innovative solutions</span>. 
+              Currently focusing on <span className="text-white font-semibold">AI/ML</span>, 
+              <span className="text-white font-semibold">web applications</span>, and 
+              <span className="text-white font-semibold">game development</span>.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Currently, I'm focused on expanding my expertise in AI and Machine Learning while 
-              continuing to develop robust web applications and engaging games. I believe in 
-              continuous learning and staying up-to-date with the latest industry trends.
-            </p>
-            <p className="text-gray-400 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to 
-              open-source projects, or working on personal development goals.
+              4+ years with Unity, 6+ months in AI/ML. I believe in 
+              <span className="text-white font-semibold"> continuous learning</span> and 
+              staying ahead with the latest tech.
             </p>
             
             <div className="flex flex-wrap gap-3 pt-4">
@@ -49,7 +47,7 @@ const About = () => {
                   <div className="text-gray-400 text-sm">Years Web Dev</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-accent mb-2">2+</div>
+                  <div className="text-4xl font-bold text-accent mb-2">6+</div>
                   <div className="text-gray-400 text-sm">Months AI/ML</div>
                 </div>
                 <div className="text-center">

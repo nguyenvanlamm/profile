@@ -26,7 +26,7 @@ const experiences = [
   {
     icon: FaBrain,
     title: 'AI / Machine Learning',
-    duration: '2+ Months',
+    duration: '6+ Months',
     details: [
       'Exploring AI concepts and implementations',
       'Learning machine learning algorithms',

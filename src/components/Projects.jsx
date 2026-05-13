@@ -7,7 +7,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400&h=300&fit=crop',
     tags: ['Unity', 'C#', '3D', 'Game Dev'],
     github: 'https://github.com/nguyenvanlamm',
-    demo: '#',
+    demo: 'https://play.google.com/store/apps/details?id=com.earlystart.android.monkeyjunior',
     category: 'game',
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
     tags: ['ReactJS', 'JavaScript', 'CSS', 'Web'],
     github: 'https://github.com/nguyenvanlamm',
-    demo: '#',
+    demo: 'https://giasu.vuihoc.vn/',
     category: 'web',
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop',
     tags: ['Python', 'AI', 'ML', 'TensorFlow'],
     github: 'https://github.com/nguyenvanlamm',
-    demo: '#',
+    demo: 'https://etudier.lamnv.com/en',
     category: 'ai',
   },
 ];
@@ -63,10 +63,15 @@ const Projects = () => {
                   {project.category === 'game' && <FaGamepad className="text-gray-400" />}
                   {project.category === 'web' && <FaGlobe className="text-gray-400" />}
                   {project.category === 'ai' && <FaRobot className="text-gray-400" />}
-                  <h3 className="text-lg font-semibold text-white group-hover:text-accent 
-                               transition-colors">
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-semibold text-white group-hover:text-accent 
+                             transition-colors cursor-pointer"
+                  >
                     {project.title}
-                  </h3>
+                  </a>
                 </div>
                 
                 <p className="text-gray-400 text-sm mb-4 line-clamp-3">
@@ -86,16 +91,6 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex items-center gap-4 pt-4 border-t border-gray-700">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-400 hover:text-accent 
-                             transition-colors text-sm"
-                  >
-                    <FaGithub className="w-4 h-4" />
-                    Code
-                  </a>
                 </div>
               </div>
             </div>
