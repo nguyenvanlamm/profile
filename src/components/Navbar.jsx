@@ -54,7 +54,7 @@ const Navbar = () => {
                 <FaGithub className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/nguyen-van-lam-454361271"
+                href="https://www.linkedin.com/in/lamnv2603"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors"
@@ -108,7 +108,7 @@ const Navbar = () => {
                 <FaGithub className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/nguyen-van-lam-454361271"
+                href="https://www.linkedin.com/in/lamnv2603"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors"

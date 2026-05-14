@@ -7,11 +7,11 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-gray-400 leading-relaxed">
-              I'm an <span className="text-white font-semibold">IT Developer</span> passionate about 
+              I'm a <span className="text-white font-semibold">Software Engineer</span> passionate about 
               building <span className="text-white font-semibold">innovative solutions</span>. 
               Currently focusing on <span className="text-white font-semibold">AI/ML</span>, 
-              <span className="text-white font-semibold">web applications</span>, and 
-              <span className="text-white font-semibold">game development</span>.
+              <span className="text-white font-semibold">web applications</span>, and
+              <span className="text-white font-semibold"> game development</span>.
             </p>
             <p className="text-gray-400 leading-relaxed">
               4+ years with Unity, 6+ months in AI/ML. I believe in 

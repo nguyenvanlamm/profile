@@ -30,7 +30,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://linkedin.com/in/nguyen-van-lam-454361271"
+            href="https://www.linkedin.com/in/lamnv2603"
             target="_blank"
             rel="noopener noreferrer"
             className="card flex flex-col items-center text-center group py-8"
@@ -88,36 +88,10 @@ const Contact = () => {
 const Footer = () => {
   return (
     <footer className="bg-gray-900 py-8 border-t border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-500 text-sm">
-            © 2025 Nguyen Van Lam. Built with ReactJS & TailwindCSS.
-          </p>
-          <div className="flex items-center gap-6">
-            <a
-              href="https://github.com/nguyenvanlamm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-accent transition-colors text-sm"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/nguyen-van-lam-454361271"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-accent transition-colors text-sm"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="#home"
-              className="text-gray-500 hover:text-accent transition-colors text-sm"
-            >
-              Back to Top
-            </a>
-          </div>
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p className="text-gray-500 text-sm">
+          © 2026 Nguyen Van Lam
+        </p>
       </div>
     </footer>
   );

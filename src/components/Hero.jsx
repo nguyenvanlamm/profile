@@ -17,11 +17,11 @@ const Hero = () => {
             Nguyen Van Lam
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-400 mb-8 animate-slide-up-delayed">
-            IT Developer / Unity Developer / Web Developer
+            Software Engineer
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up-delayed">
             Passionate about creating innovative digital experiences. 
-            Specializing in game development, web applications, and exploring the world of AI.
+            Specializing in game development, web applications, and working on some AI-powered applications.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up-delayed">
@@ -56,7 +56,7 @@ const Hero = () => {
               <FaGithub className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/in/nguyen-van-lam-454361271"
+              href="https://www.linkedin.com/in/lamnv2603"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-accent transition-all duration-300 hover:scale-110"
