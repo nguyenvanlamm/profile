@@ -52,12 +52,12 @@
 
         .page {
             width: 210mm;
-            height: 297mm;
+            min-height: 297mm;
             background: var(--paper);
             margin: 20px auto;
             box-shadow: 0 25px 80px rgba(0,0,0,0.15);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         .page::before {
@@ -74,7 +74,7 @@
         .container {
             display: grid;
             grid-template-columns: 1fr 2.2fr;
-            height: 297mm;
+            min-height: 297mm;
         }
 
         .sidebar {
@@ -200,6 +200,7 @@
 
         .main {
             padding: 28px 32px;
+            padding-bottom: 10px;
             background: var(--paper);
             display: flex;
             flex-direction: column;
@@ -656,10 +657,7 @@
                     </div>
                 </section>
 
-                <div class="page-footer">
-                    <span>NGUYEN VAN LAM • Software Engineer</span>
-                    <span><a href="https://lamnv.com">lamnv.com</a></span>
-                </div>
+                
             </main>
         </div>
     </div>
