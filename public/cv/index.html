@@ -52,12 +52,12 @@
 
         .page {
             width: 210mm;
-            min-height: 297mm;
+            height: 297mm;
             background: var(--paper);
             margin: 20px auto;
             box-shadow: 0 25px 80px rgba(0,0,0,0.15);
             position: relative;
-            overflow: visible;
+            overflow: hidden;
         }
 
         .page::before {
@@ -74,13 +74,13 @@
         .container {
             display: grid;
             grid-template-columns: 1fr 2.2fr;
-            min-height: 297mm;
+            height: 297mm;
         }
 
         .sidebar {
             background: var(--ink);
             color: var(--paper);
-            padding: 28px 22px;
+            padding: 20px 16px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -98,18 +98,18 @@
 
         .profile-section {
             text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 16px;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .profile-photo {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .tagline {
@@ -121,7 +121,7 @@
         }
 
         .sidebar-section {
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .sidebar-title {
@@ -130,16 +130,16 @@
             text-transform: uppercase;
             letter-spacing: 0.25em;
             color: var(--accent);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 8px;
-            font-size: 8.5pt;
+            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 8pt;
         }
 
         .contact-icon {
@@ -161,15 +161,15 @@
         }
 
         .skill-category {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .skill-label {
-            font-size: 7.5pt;
+            font-size: 7pt;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: rgba(255,255,255,0.5);
-            margin-bottom: 5px;
+            margin-bottom: 3px;
             font-weight: 500;
         }
 
@@ -199,7 +199,7 @@
         }
 
         .main {
-            padding: 28px 32px;
+            padding: 20px 24px;
             padding-bottom: 10px;
             background: var(--paper);
             display: flex;
@@ -207,8 +207,8 @@
         }
 
         .header {
-            margin-bottom: 20px;
-            padding-bottom: 16px;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
             border-bottom: 2px solid var(--ink);
             position: relative;
         }
@@ -225,7 +225,7 @@
 
         .name {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 32pt;
+            font-size: 28pt;
             font-weight: 700;
             letter-spacing: 0.02em;
             color: var(--ink);
@@ -242,23 +242,23 @@
         }
 
         .summary {
-            margin-bottom: 20px;
-            padding: 14px 16px;
+            margin-bottom: 12px;
+            padding: 10px 14px;
             background: var(--paper-warm);
             border-left: 3px solid var(--accent);
             font-size: 9pt;
             color: var(--ink-light);
-            line-height: 1.55;
+            line-height: 1.4;
             font-style: italic;
         }
 
         .section {
-            margin-bottom: 18px;
+            margin-bottom: 12px;
         }
 
         .section-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 11pt;
+            font-size: 10pt;
             text-transform: uppercase;
             letter-spacing: 0.2em;
             color: var(--ink);
@@ -269,7 +269,7 @@
         }
 
         .experience-item {
-            margin-bottom: 14px;
+            margin-bottom: 10px;
             position: relative;
         }
 
@@ -277,34 +277,34 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .company {
             font-weight: 600;
-            font-size: 10pt;
+            font-size: 9.5pt;
             color: var(--ink);
         }
 
         .period {
-            font-size: 8pt;
+            font-size: 7.5pt;
             color: var(--ink-subtle);
             font-style: italic;
         }
 
         .role {
-            font-size: 9pt;
+            font-size: 8.5pt;
             color: var(--accent-dark);
             font-weight: 500;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .location {
-            font-size: 7.5pt;
+            font-size: 7pt;
             color: var(--ink-subtle);
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
 
         .experience-content ul {
@@ -313,12 +313,12 @@
         }
 
         .experience-content li {
-            font-size: 8.5pt;
+            font-size: 8pt;
             color: var(--ink-light);
-            margin-bottom: 3px;
-            padding-left: 12px;
+            margin-bottom: 2px;
+            padding-left: 10px;
             position: relative;
-            line-height: 1.45;
+            line-height: 1.4;
         }
 
         .experience-content li::before {
@@ -365,7 +365,7 @@
         }
 
         .education-item {
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .degree {
@@ -375,12 +375,12 @@
         }
 
         .institution {
-            font-size: 8.5pt;
+            font-size: 8pt;
             color: var(--accent-dark);
         }
 
         .edu-period {
-            font-size: 7.5pt;
+            font-size: 7pt;
             color: var(--ink-subtle);
             font-style: italic;
         }
