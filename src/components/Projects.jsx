@@ -1,4 +1,4 @@
-import { FaGithub, FaExternalLinkAlt, FaGamepad, FaGlobe, FaRobot } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaGamepad, FaGlobe, FaRobot, FaShieldAlt } from 'react-icons/fa';
 
 const projects = [
   {
@@ -27,6 +27,42 @@ const projects = [
     github: 'https://github.com/nguyenvanlamm',
     demo: 'https://etudier.lamnv.com/en',
     category: 'ai',
+  },
+  {
+    title: 'SecureLens',
+    description: "Website security posture scanner. Analyzes publicly observable configurations (HTTPS, TLS, security headers, cookies, CSP, CORS) and produces an explainable score with fix recommendations and a PDF report.",
+    image: 'https://securelen.lamnv.com/shield.svg',
+    tags: ['React', 'FastAPI', 'Security', 'Web'],
+    github: 'https://github.com/nguyenvanlamm',
+    demo: 'https://securelen.lamnv.com',
+    category: 'security',
+  },
+  {
+    title: 'Time Echo',
+    description: "Puzzle game where you cooperate with your past self. Each time loop, your previous run becomes an echo replaying its moves — hold buttons, push boxes, and bridge gaps to reach the exit across 80 levels.",
+    image: 'https://timecho.lamnv.com/icons/Icon-192.png',
+    tags: ['Flutter', 'Game', 'Puzzle'],
+    github: 'https://github.com/nguyenvanlamm',
+    demo: 'https://timecho.lamnv.com',
+    category: 'game',
+  },
+  {
+    title: 'Cạm Bẫy',
+    description: "Hidden-trap platformer in the spirit of Trap Adventure 2. Guide a little robot out of a scrap factory where every trap strikes when you least expect it — the only way through is to die enough to learn the level.",
+    image: 'https://cambay.lamnv.com/icons/Icon-192.png',
+    tags: ['Flutter', 'Game', 'Platformer'],
+    github: 'https://github.com/nguyenvanlamm',
+    demo: 'https://cambay.lamnv.com',
+    category: 'game',
+  },
+  {
+    title: 'Travel Memory Book',
+    description: "A personal travel journal that turns each trip into a digital photo book you can flip through years later. Offline-first with photo timelines, per-day journals, and a book-style page viewer — private by design, no social feed.",
+    image: 'https://travelbook.lamnv.com/icons/Icon-192.png',
+    tags: ['Flutter', 'Riverpod', 'Offline-first'],
+    github: 'https://github.com/nguyenvanlamm',
+    demo: 'https://travelbook.lamnv.com',
+    category: 'web',
   },
 ];
 
@@ -63,6 +99,7 @@ const Projects = () => {
                   {project.category === 'game' && <FaGamepad className="text-gray-400" />}
                   {project.category === 'web' && <FaGlobe className="text-gray-400" />}
                   {project.category === 'ai' && <FaRobot className="text-gray-400" />}
+                  {project.category === 'security' && <FaShieldAlt className="text-gray-400" />}
                   <a
                     href={project.demo}
                     target="_blank"
