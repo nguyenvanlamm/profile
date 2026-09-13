@@ -56,6 +56,15 @@ const projects = [
     category: 'game',
   },
   {
+    title: 'Maisie — Emotional Companion',
+    description: "An interactive 3D emotional companion that listens to your feelings and acts them out through body language — a little character rendered in real-time 3D that reacts to what you share.",
+    image: 'https://emotion.lamnv.com/favicon.svg',
+    tags: ['React', 'Three.js', 'R3F', '3D'],
+    github: 'https://github.com/nguyenvanlamm',
+    demo: 'https://emotion.lamnv.com/',
+    category: 'ai',
+  },
+  {
     title: 'Travel Memory Book',
     description: "A personal travel journal that turns each trip into a digital photo book you can flip through years later. Offline-first with photo timelines, per-day journals, and a book-style page viewer — private by design, no social feed.",
     image: 'https://travelbook.lamnv.com/icons/Icon-192.png',
