@@ -56,7 +56,7 @@ const projects = [
     category: 'game',
   },
   {
-    title: 'Maisie — Emotional Companion',
+    title: 'Express Emotion',
     description: "An interactive 3D emotional companion that listens to your feelings and acts them out through body language — a little character rendered in real-time 3D that reacts to what you share.",
     image: 'https://emotion.lamnv.com/favicon.svg',
     tags: ['React', 'Three.js', 'R3F', '3D'],
